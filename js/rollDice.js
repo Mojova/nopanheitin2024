@@ -1,11 +1,18 @@
 import {createResultsTable} from "./createResultsTable.js";
 
-function rollDie(reroll, infiniteRerolls) {
-  const result = Math.floor(Math.random() * 10 + 1);
-  if (infiniteRerolls) {
+function d10() {
+  return Math.floor(Math.random() * 10 + 1);
+}
 
+function rollDie(rerollValues, doReroll) {
+  const result = d10();
+  if (!rerollValues.includes(result)) {
+    return result;
   }
-  return reroll.includes(result) ? Math.floor(Math.random() * 10 + 1) : result;
+  if (doReroll) {
+    return rollDie(rerollValues, true);
+  }
+  return rollDie(rerollValues, false);
 }
 
 export function rollDice(amount, successThreshold, doubleThreshold, reroll, infiniteRerolls) {
