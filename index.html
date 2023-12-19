@@ -1,0 +1,105 @@
+<!doctype html>
+<html class="no-js" lang="fi">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Exalted-nopanheitin 2024</title>
+
+  <link rel="icon" href="/chaika.png" sizes="any">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <script src="js/app.js" type="module"></script>
+</head>
+
+<body>
+<main id="main">
+  <div class="header-container">
+    <h1>Exalted-nopanheitin 2024</h1>
+  </div>
+  <form id="form">
+    <fieldset>
+      <legend>
+        Onnistuminen
+      </legend>
+      <div class="radio-container">
+        <div>
+          <input id="success-threshold-4" type="radio" name="successThreshold" value="4"/>
+          <label for="success-threshold-4">4</label>
+        </div>
+        <div>
+          <input id="success-threshold-5" type="radio" name="successThreshold" value="5"/>
+          <label for="success-threshold-5">5</label>
+        </div>
+        <div>
+          <input id="success-threshold-6" type="radio" name="successThreshold" value="6"/>
+          <label for="success-threshold-6">6</label>
+        </div>
+        <div>
+          <input id="success-threshold-7" type="radio" name="successThreshold" value="7" checked/>
+          <label for="success-threshold-7">7</label>
+        </div>
+        <div>
+          <input id="success-threshold-8" type="radio" name="successThreshold" value="8"/>
+          <label for="success-threshold-8">8</label>
+        </div>
+        <div>
+          <input id="success-threshold-9" type="radio" name="successThreshold" value="9"/>
+          <label for="success-threshold-9">9</label>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>
+        Tuplaraja
+      </legend>
+      <input id="double-threshold-7" type="radio" name="doubleThreshold" value="7"/>
+      <label for="double-threshold-7">7</label>
+      <input id="double-threshold-8" type="radio" name="doubleThreshold" value="8"/>
+      <label for="double-threshold-8">8</label>
+      <input id="double-threshold-9" type="radio" name="doubleThreshold" value="9"/>
+      <label for="double-threshold-9">9</label>
+      <input id="double-threshold-10" type="radio" name="doubleThreshold" value="10" checked/>
+      <label for="double-threshold-10">10</label>
+    </fieldset>
+    <fieldset>
+      <legend>Heitä uudestaan</legend>
+      <div class="radio-container">
+        <div>
+          <input id="reroll-1" type="checkbox" name="reroll" value="1" />
+          <label for="reroll-1">1</label>
+        </div>
+        <div>
+          <input id="reroll-2" type="checkbox" name="reroll" value="2" />
+          <label for="reroll-2">2</label>
+        </div>
+        <div>
+          <input id="reroll-3" type="checkbox" name="reroll" value="3" />
+          <label for="reroll-3">3</label>
+        </div>
+        <div>
+          <input id="reroll-4" type="checkbox" name="reroll" value="4" />
+          <label for="reroll-4">4</label>
+        </div>
+        <div>
+          <input id="reroll-5" type="checkbox" name="reroll" value="5" />
+          <label for="reroll-5">5</label>
+        </div>
+        <div>
+          <input id="reroll-6" type="checkbox" name="reroll" value="6" />
+          <label for="reroll-6">6</label>
+        </div>
+        <div id="infinite-rerolls-container">
+          <input id="infinite-rerolls" type="checkbox" name="reroll" value="infinite-rerolls" />
+          <label for="infinite-rerolls">Heitä, kunnes ei enää näy</label>
+        </div>
+      </div>
+    </fieldset>
+    <label for="diceAmount">Noppien määrä</label>
+    <input id="diceAmount" type="text"/>
+    <button id="submit-button" type="submit">Heitä</button>
+  </form>
+</main>
+</body>
+
+</html>
