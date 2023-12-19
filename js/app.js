@@ -38,6 +38,16 @@ function processFormSubmit(e) {
     return false;
 }
 
+function getButtonText(amount) {
+    if (Number.isInteger(amount)) {
+        if (amount === 1) {
+            return `Heitä 1 noppa`;
+        }
+        return `Heitä ${amount} noppaa`;
+    }
+    return `Heitä`;
+}
+
 window.addEventListener("load", () => {
     const form = document.getElementById('form');
     form.addEventListener("submit", processFormSubmit);
@@ -45,10 +55,7 @@ window.addEventListener("load", () => {
     amountInput.addEventListener("keyup", (event) => {
         const submitButton = document.getElementById("submit-button");
         const amount = stringCalculator(event.target.value);
-        if (Number.isInteger(amount)) {
-            submitButton.textContent = `Heitä ${amount} noppaa`;
-        } else {
-            submitButton.textContent = `Heitä`;
-        }
+        submitButton.textContent = getButtonText(amount);
+
     })
 })
